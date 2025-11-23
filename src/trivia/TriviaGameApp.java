@@ -26,7 +26,7 @@ import java.util.Collections;
  * Main JavaFX app for the trivia game.
  * This handles loading the trivia.dat file, showing the questions
  * one at a time, scoring the answers, and ending with a final score.
- * Will clean it up visually later once logic is confirmed working.
+ * Will clean it up visually later once logic is confirmed working. Testing.
  */
 public class TriviaGameApp extends Application {
 

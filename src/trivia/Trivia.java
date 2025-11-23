@@ -7,7 +7,7 @@ package trivia;
 import java.io.Serializable;
 
 /**
- * Simple data class for one trivia question.
+ * Simple data class for a trivia question.
  */
 public class Trivia implements Serializable {
 

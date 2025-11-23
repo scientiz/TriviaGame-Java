@@ -10,7 +10,7 @@ import java.io.ObjectOutputStream;
 
 /**
  * This class is only used once to create trivia.dat.
- * After running it a single time, the JavaFX game will read
+ * After running it a single time, the JavaFX game will always read
  * the questions from the file instead of hardcoding them.
  */
 public class TriviaFileBuilder {
