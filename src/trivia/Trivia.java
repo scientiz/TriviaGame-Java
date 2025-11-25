@@ -7,9 +7,9 @@ package trivia;
 import java.io.Serializable;
 
 /**
- * Holds one trivia question. 
+ * Holds and displays one trivia question at a time. 
  * Simple data class the game reads from the file.
- * Serializable so we can save/load cleanly.
+ * Serializable so I can save/load cleanly.
  */
 public class Trivia implements Serializable {
 

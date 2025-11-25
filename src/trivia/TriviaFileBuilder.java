@@ -10,7 +10,8 @@ import java.io.ObjectOutputStream;
 
 /**
  * One-time utility to create trivia.dat.
- * Run this first. The JavaFX app loads this file at runtime.
+ * Run this ONCE before attempting to run the program: TriviaGameApp.java (main)
+ * Run again only if edits are made. The JavaFX app always loads the created .dat file at runtime.
  */
 public class TriviaFileBuilder {
 
@@ -32,7 +33,7 @@ public class TriviaFileBuilder {
         Trivia q5 = new Trivia("What is the beginning of Eternity, The End of Time and Space, The Beginning of Every End, and The End of Every Race?",
                 "E", 3);
         
-        //I wanted to add more than requested
+        // I wanted to add more than requested for randomization
         Trivia q6 = new Trivia("What Catwoman's real name?",
                 "Selena Kyle", 1);
         

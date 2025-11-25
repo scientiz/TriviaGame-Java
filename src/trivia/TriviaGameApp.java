@@ -4,10 +4,8 @@
  */
 
 /**
- * The main JavaFX app for the trivia game.
- * This handles loading the trivia.dat file, showing the questions
- * one at a time, scoring the answers, and ending with a final score.
- * Will clean it up visually later once logic is confirmed working. Testing.
+ * Author: ScienTiz github.com/Scientiz
+ * The main JavaFX app for a Batman trivia game in COSC 211.
  */
 package trivia;
 
