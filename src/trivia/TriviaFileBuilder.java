@@ -9,49 +9,58 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 /**
- * This class is only used once to create trivia.dat.
- * After running it a single time, the JavaFX game will always read
- * the questions from the file instead of hardcoding them.
+ * One-time utility to create trivia.dat.
+ * Run this first. The JavaFX app loads this file at runtime.
  */
 public class TriviaFileBuilder {
 
     public static void main(String[] args) {
 
-        Trivia q1 = new Trivia(
-                "What planet is known as the Red Planet?",
-                "Mars",
-                1);
+        // Build the 5 questions the game uses
+        Trivia q1 = new Trivia("The less of them you have, the more one is worth?",
+                "A friend", 2);
 
-        Trivia q2 = new Trivia(
-                "What is the largest mammal on Earth?",
-                "Blue whale",
-                1);
+        Trivia q2 = new Trivia("I can be cracked. I can be made. I can be told. I can be played. What am I?",
+                "A joke", 1);
 
-        Trivia q3 = new Trivia(
-                "In what year did the Titanic sink?",
-                "1912",
-                2);
+        Trivia q3 = new Trivia("Who is Batman's alter ego?",
+                "Bruce Wayne", 1);
 
-        Trivia q4 = new Trivia(
-                "What gas do plants absorb from the atmosphere?",
-                "Carbon dioxide",
-                2);
+        Trivia q4 = new Trivia("What villain is known for their plant-based powers?",
+                "Poison Ivy", 2);
 
-        Trivia q5 = new Trivia(
-                "Who developed the theory of general relativity?",
-                "Einstein",
-                3);
+        Trivia q5 = new Trivia("What is the beginning of Eternity, The End of Time and Space, The Beginning of Every End, and The End of Every Race?",
+                "E", 3);
+        
+        //I wanted to add more than requested
+        Trivia q6 = new Trivia("What Catwoman's real name?",
+                "Selena Kyle", 1);
+        
+        Trivia q7 = new Trivia("Who became Batgirl after being injured by the Joker?",
+                "Barbara Gordon", 3);
+        
+        Trivia q8 = new Trivia("What role did Morgan Freeman play in The Dark Knight?",
+                "Lucius Fox", 2);
+        
+        Trivia q9 = new Trivia("Which villain is known for his mastery of fear and gas that induces it?",
+                "Scarecrow", 3);
+        
+        Trivia q10 = new Trivia("Who does the Arkham Asylum Psychiatrist - Dr. Harleen Quinzel, become?",
+                "Harley Quinn", 1);
 
-        Trivia[] bank = { q1, q2, q3, q4, q5 };
+        // Store them in an array so writing is clean and predictable
+        Trivia[] bank = { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10 };
 
+        // Write everything to trivia.dat using an ObjectOutputStream
         try (ObjectOutputStream out = new ObjectOutputStream(
                 new FileOutputStream("trivia.dat"))) {
 
             for (Trivia t : bank) {
-                out.writeObject(t);
+                out.writeObject(t); // writing each object sequentially
             }
 
             System.out.println("Successfully created trivia.dat.");
+
         } catch (IOException e) {
             System.out.println("Error writing trivia.dat: " + e.getMessage());
         }
